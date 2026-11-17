@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #333333;
+    font: 16px 'Lato', sans-serif;
+}
+
+header {
+    min-height: 100vh;
+    padding: 25px 5% 55px;
+    background: #25477f;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    display: block;
+    width: 90px;
+    height: auto;
+}
+
+.nav-primary {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item a {
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.nav-item.cta-btn a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 3px;
+    background: #29b8df;
+    color: #fff;
+}
+
+.header-title {
+    margin: 100px 0 8px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.header-subtitle {
+    margin: 0;
+    color: #6d91bb;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#button-container {
+    margin: 28px 0 75px;
+    text-align: center;
+}
+
+.header-btn {
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 3px;
+    background: #28b9df;
+    color: #fff;
+    font-size: 11px;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.header-services {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.service {
+    flex: 1;
+    min-height: 190px;
+    padding: 27px 30px;
+}
+
+.service:nth-child(2) {
+    background: #28b9df;
+}
+
+.service-title {
+    margin: 0 0 18px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.service-intro {
+    margin: 0;
+    color: rgba(255,255,255,.88);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.service-link {
+    display: block;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    nav, .nav-primary {
+        flex-wrap: wrap;
+    }
+
+    .nav-primary {
+        gap: 12px;
+    }
+
+    .header-title {
+        margin-top: 65px;
+        font-size: 28px;
+    }
+
+    .header-services {
+        flex-direction: column;
+    }
+
+    .service {
+        min-height: auto;
+    }
+}

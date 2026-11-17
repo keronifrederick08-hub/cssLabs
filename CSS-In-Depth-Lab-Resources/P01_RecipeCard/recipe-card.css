@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 56px 4%;
+    background: #292929 url('images/food-image-bg.png') center center / cover fixed no-repeat;
+    color: #fff;
+    font: 16px 'Lato', sans-serif;
+}
+
+main {
+    position: relative;
+    width: min(100%, 1100px);
+    min-height: 520px;
+    margin: 0 auto;
+    padding: 34px 45px 35px 51%;
+    overflow: hidden;
+    border-radius: 5px;
+    background: rgba(22, 27, 29, .88);
+    box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    inset: 0 51% 0 0;
+    background: url('images/food-image-bg.png') center / cover no-repeat;
+}
+
+h1 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.recipies-info {
+    display: flex;
+    gap: 24px;
+    margin: 0 0 25px;
+}
+
+.recipies-info p {
+    margin: 0;
+    color: #b5c640;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+.recipies-info span {
+    display: block;
+    margin-top: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn-primary {
+    border: 0;
+    border-radius: 18px;
+    padding: 10px 20px;
+    background: #b5c640;
+    color: #fff;
+    font: inherit;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.prep-steps {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.step {
+    position: relative;
+    margin: 0 0 17px;
+    padding-left: 28px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #b5c640;
+    font-weight: 900;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    main {
+        padding: 260px 24px 28px;
+    }
+
+    main::before {
+        inset: 0 0 auto;
+        height: 235px;
+    }
+
+    .recipies-info {
+        gap: 15px;
+    }
+}
